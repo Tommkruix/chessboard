@@ -1,0 +1,8 @@
+src/**/*.ts
+src/**/*.tsx
+src/assets/images
+node_modules/**
+public
+dist
+*.json
+*.ico

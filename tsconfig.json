@@ -18,9 +18,38 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "outDir": "dist",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "paths": {
+      "@/*":           ["*"],
+      "@assets/*":     ["assets/*"],
+      "@images/*":     ["assets/images/*"],
+      "@scss/*":       ["assets/scss/*"],
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@utils/*":      ["utils/*"],
+      "@helpers/*":    ["helpers/*"],
+    },
+    "types": ["webpack-env", "reflect-metadata", "jest", "mocha", "node"],
+    "suppressImplicitAnyIndexErrors": true,
   },
   "include": [
-    "src"
+    "./src/**/*", "./configs/webpack/*", "./src/**/*.spec.ts",
+    "./src/**/*.test.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "scripts",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "**/*/*.test.ts",
   ]
 }
